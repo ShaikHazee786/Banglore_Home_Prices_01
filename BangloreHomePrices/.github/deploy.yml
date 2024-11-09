@@ -3,7 +3,7 @@ name: Deploy Bangalore Home Prices
 on:
   push:
     branches:
-      - Main
+      - main
 
 jobs:
   build-and-deploy:
