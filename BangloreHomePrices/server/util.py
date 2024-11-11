@@ -15,7 +15,6 @@ __model = None
 class CustomUnpickler(pickle.Unpickler):
     def find_class(self, module, name):
         # Remap the old module path to the new one
-        #add
         if module == 'sklearn.linear_model.base' and name == 'LinearRegression':
             module = 'sklearn.linear_model._base'
         return super().find_class(module, name)
