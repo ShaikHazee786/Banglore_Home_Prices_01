@@ -35,6 +35,7 @@ jobs:
         tags: ${{ secrets.DOCKER_USERNAME }}/bhp-site:latest
 
     # Step 5: Deploy (Optional - Uncomment when deploying)
+    #good
     #- name: Deploy to Server
      # run: |
       #  ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
