@@ -11,7 +11,6 @@ jobs:
 
     steps:
     # Step 1: Checkout code
-    #njkkv
     - name: Checkout code
       uses: actions/checkout@v3
 
@@ -31,11 +30,11 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .
-        file: ./DockerFile
+        file: ./Dockerfile  # Ensure proper casing
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/bhp-site:latest
-#good
-    # Step 5: Deploy (Optional - Update based on your deployment needs)
+
+    # Step 5: Deploy (Optional - Uncomment when deploying)
     #- name: Deploy to Server
      # run: |
       #  ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'EOF'
@@ -44,4 +43,3 @@ jobs:
         #docker rm bhp || true
         #docker run -d -p 5000:5000 --name bhp ${{ secrets.DOCKER_USERNAME }}/bhp-site:latest
         #EOF
-        
