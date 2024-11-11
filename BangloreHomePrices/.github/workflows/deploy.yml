@@ -34,7 +34,7 @@ jobs:
         file: ./DockerFile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/bhp-site:latest
-
+#good
     # Step 5: Deploy (Optional - Update based on your deployment needs)
     #- name: Deploy to Server
      # run: |
